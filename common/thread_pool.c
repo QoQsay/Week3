@@ -98,7 +98,7 @@ void do_work(struct User* user) {
 
     else if (msg. type & CHAT_FIN) {
 
-	bzero(msg.msg,sizeof(msg.msg));
+	bzero(&msg,sizeof(msg));
 	msg.type = CHAT_SYS;
 	sprintf(msg.msg,"注意 : 用户 %s 即将下线！", user->name);
 	strcpy(msg.name,user->name);
