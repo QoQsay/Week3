@@ -189,7 +189,7 @@ int main(int argc, char** argv) {
 	       struct ChatMsg login_msg;
                 bzero(&login_msg, sizeof(login_msg));
                 login_msg.type = CHAT_SYS;
-                sprintf(login_msg.msg, "¿¿¿¿ %s ¿¿¿¿¿¿¿¿¿\n", user.name);
+                sprintf(login_msg.msg, "Your Friend %s has loggin\n", user.name);
                 send_all(&login_msg);
                 add_to_sub_reactor(&user);
 
